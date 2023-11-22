@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.effect.DropShadow?>
+<VBox fx:id="mainVBox" xmlns:fx="http://javafx.com/fxml" styleClass="background" alignment="CENTER" spacing="20">
+    <HBox alignment="CENTER" style=" -fx-background-color: black;">
+        <ImageView>
+            <Image url="/img/logoSpotify2_1.png"/>
+        </ImageView>
+    </HBox>
+    <HBox alignment="CENTER" spacing="30">
+        <VBox alignment="CENTER" spacing="20" fx:id="homepageMenu" style="-fx-padding: -100 20 0 0">
+            <Button text="Library" onAction="#openLibrary" styleClass="menu-button" />
+            <Button text="Playlists" onAction="#openPlaylists" styleClass="menu-button" />
+            <Button text="Social" onAction="#openSocial" styleClass="menu-button" />
+            <Button text="Profile" onAction="#openProfile" styleClass="menu-button" />
+            <Button text="Logout" onAction="#logout" styleClass="menu-button" />
+        </VBox>
+        <VBox alignment="CENTER" spacing="20">
+            <HBox spacing="20" alignment="CENTER">
+                <ToggleButton fx:id="titleToggleButton" text="Title" onAction="#handleTitleButton" selected="true"/>
+                <ToggleButton fx:id="artistToggleButton" text="Artist" onAction="#handleArtistButton"/>
+                <Button text="Back" onAction="#handleBackButton" managed="false" fx:id="backButton"/>
+            </HBox>
+            <TextField fx:id="searchField" promptText="Search for Songs" onKeyTyped="#search" style="-fx-border-radius: 1">
+                <effect>
+                    <DropShadow color="lightgray" spread="0.1"/>
+                </effect>
+            </TextField>
+            <ListView fx:id="resultListView" onMouseClicked="#handleSongClick" style="-fx-min-width: 350px; -fx-max-width: 350px;"/>
+        </VBox>
+    </HBox>
+</VBox>

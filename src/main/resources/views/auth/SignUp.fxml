@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.VBox?>
+<VBox fx:id="signUpVBox" xmlns:fx="http://javafx.com/fxml" fx:controller="it.unipi.lsmd.spotify2.controllers.auth.SignUpController" alignment="CENTER">
+
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white; -fx-border-radius: 5;" maxWidth="400" minHeight="550">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+        <Label text="Sign Up" styleClass="title-text" />
+
+        <TextField fx:id="newUsernameField" promptText="Username" style="-fx-background-color: white"/>
+
+        <PasswordField fx:id="newPasswordField" promptText="Password" style="-fx-background-color: white"/>
+
+        <TextField fx:id="newEmailField" promptText="Email" style="-fx-background-color: white"/>
+
+
+        <ComboBox fx:id="countryComboBox" promptText="Select a country" style="-fx-background-color: white" minWidth="300"/>
+
+        <TextField fx:id="photoTextField" promptText="photo" focusTraversable="false" style="-fx-background-color: white"/>
+
+        <Label fx:id="errorMessageLabel" textFill="RED" />
+
+        <Hyperlink text="Already have an account? Sign In" onAction="#switchToSignIn" styleClass="signup-link" />
+
+        <Button text="Sign Up" onAction="#signUp" style="-fx-font-weight: bold"/>
+    </VBox>
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER" styleClass="background" spacing="20" fx:id="vBox" fx:controller="it.unipi.lsmd.spotify2.controllers.admin.AdminHomepageController">
+    <HBox alignment="CENTER" style=" -fx-background-color: black;">
+        <ImageView>
+            <Image url="/img/logoSpotify2_1.png"/>
+        </ImageView>
+    </HBox>
+    <Button text="Top songs per country" onMouseClicked="#handleBtnTopSongsPerCountry" style="-fx-min-width: 200px"/>
+    <Button text="Playlists statistics" onMouseClicked="#handlePlaylistsStatistics" style="-fx-min-width: 200px"/>
+    <Button text="Genre distributions" onMouseClicked="#handleGenreDistributions" style="-fx-min-width: 200px"/>
+    <Button text="Insert new Song" onMouseClicked="#handleBtnInsertSong" style="-fx-min-width: 200px"/>
+    <Button text="Update/Delete Song" onMouseClicked="#handleBtnUpdateDeleteSong" style="-fx-min-width: 200px"/>
+    <Button text="Logout" onMouseClicked="#handleBtnLogout" style="-fx-min-width: 200px"/>
+</VBox>

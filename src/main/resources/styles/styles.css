@@ -1,0 +1,165 @@
+/* Global styles */
+.background {
+    -fx-background-color: #ECECEC;
+}
+
+/* Button style */
+.button {
+    -fx-background-color: #0076D7;
+    -fx-text-fill: white;
+    -fx-font-size: 16.0;
+    -fx-padding: 10 20;
+    -fx-background-radius: 15;
+    -fx-min-width: 100px;
+    -fx-max-width: 100px;
+}
+
+.button:hover {
+    -fx-background-color: #0059AA;
+}
+
+/* Style for selected ToggleButton */
+.toggle-button:selected {
+    -fx-background-color: #FF9900;
+}
+
+.toggle-button {
+    -fx-background-color: #0076D7;
+    -fx-text-fill: white;
+    -fx-font-size: 16.0;
+    -fx-padding: 10 20;
+    -fx-background-radius: 15;
+    -fx-min-width: 100px;
+    -fx-max-width: 100px;
+}
+
+/* Title text style */
+.title-text {
+    -fx-text-fill: #333333;
+    -fx-font-size: 24.0;
+}
+
+/* Label text style */
+.label-text {
+    -fx-text-fill: #333333;
+    -fx-font-size: 18.0;
+    -fx-font-weight: bold;
+}
+
+
+/* Sign Up hyperlink style */
+.signup-link {
+    -fx-text-fill: #0076D7;
+    -fx-underline: true;
+    -fx-font-size: 15.0;
+}
+
+.menu-button {
+    -fx-background-color: #0076D7;
+    -fx-text-fill: white;
+    -fx-font-size: 18.0;
+    -fx-min-width: 120px;
+    -fx-max-width: 120px;
+    -fx-max-height: 50px;
+    -fx-min-height: 50px;
+    -fx-background-radius: 15
+}
+
+.menu-button:hover {
+    -fx-background-color: #0059AA;
+}
+
+.text-field {
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 15;
+    -fx-font-size: 16.0;
+    -fx-min-width: 300px;
+    -fx-max-width: 300px;
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #CCCCCC; /* Set the color you prefer for the prompt text */
+    -fx-alignment: center; /* Center-align the text */
+}
+
+.custom-date-picker .text-field {
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 0;
+    -fx-font-size: 16.0;
+    -fx-min-width: 300px;
+    -fx-max-width: 300px;
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #CCCCCC; /* Set the color you prefer for the prompt text */
+    -fx-alignment: center; /* Center-align the text */
+}
+
+.search-box {
+    -fx-spacing: 10;
+    -fx-min-width: 300px;
+    -fx-max-width: 300px;
+    -fx-alignment: center;
+}
+
+.list-view {
+    -fx-control-inner-background: white;
+    -fx-padding: 10;
+    -fx-min-width: 500px;
+    -fx-max-width: 500px;
+    -fx-min-height: 400px;
+    -fx-max-height: 400px;
+    -fx-font-size: 16.0;
+    -fx-background-color: white;
+    -fx-border-color: #CCCCCC;
+    -fx-effect: dropshadow(three-pass-box, lightgray, 10, 0.1, 0, 0);
+}
+
+.logo-image {
+    -fx-fit-to-width: 50;
+    -fx-fit-to-height: 50;
+}
+
+
+/* Style the ComboBox */
+.combo-box {
+    -fx-background-color: #F2F2F2; /* Background color */
+    -fx-text-fill: #333333; /* Text color */
+    -fx-prompt-text-fill: #999999; /* Prompt text color */
+    -fx-border-color: #CCCCCC; /* Border color */
+    -fx-border-width: 2px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+    -fx-font-size: 16px; /* Font size */
+    -fx-pref-width: 200px; /* Preferred width */
+}
+
+/* Style the ComboBox when focused (optional) */
+.combo-box:focused {
+    -fx-border-color: #0076AE; /* Border color when focused */
+    -fx-background-color: #E0E0E0; /* Background color when focused */
+}
+
+/* Style the ComboBox arrow button (optional) */
+.combo-box .arrow-button {
+    -fx-background-color: #CCCCCC; /* Arrow button background color */
+    -fx-shape: ""; /* Remove the arrow shape */
+}
+
+/* Style the items in the ComboBox popup (optional) */
+.combo-box-popup .list-view {
+    -fx-background-color: #F2F2F2; /* Popup background color */
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: #333333; /* Item text color */
+}
+
+.combo-box-popup .list-view .list-cell:selected {
+    -fx-background-color: #0076AE; /* Selected item background color */
+    -fx-text-fill: #FFFFFF; /* Selected item text color */
+}
+
+
+
+
+
+
+

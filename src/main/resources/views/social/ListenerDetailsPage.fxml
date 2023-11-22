@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="background" fx:id="mainVBox" spacing="20">
+    <HBox alignment="CENTER" style=" -fx-background-color: black;">
+        <ImageView>
+            <Image url="/img/logoSpotify2_1.png"/>
+        </ImageView>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button text="Back" onAction="#handleBackButton" />
+        <Label text="Listener Details" styleClass="title-text" />
+    </HBox>
+    <VBox alignment="CENTER" spacing="20">
+        <ToggleButton fx:id="followButton" text="Follow" onAction="#handleFollowButton" style="-fx-min-width: 130" />
+        <!-- Center Section: Song Details -->
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20 0 0 0">
+            <VBox spacing="5">
+                <Label text="Name:" styleClass="label-text"/>
+                <Label fx:id="userNameLabel" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="usernameTextField" managed="false" editable="false" visible="false"/>
+                <Label text="Email:" styleClass="label-text"/>
+                <Label fx:id="emailLabel" style="-fx-font-size: 16px;"/>
+                <TextField fx:id="emailTextField" managed="false" editable="false" visible="false"/>
+                <Label text="Country:" styleClass="label-text"/>
+                <Label fx:id="countryLabel" style="-fx-font-size: 16px;"/>
+                <ComboBox fx:id="countryComboBox" managed="false" visible="false"/>
+            </VBox>
+            <VBox alignment="CENTER" spacing="20">
+                <ImageView fx:id="listenerImage" fitWidth="200" fitHeight="200"/>
+                <HBox alignment="CENTER" spacing="50">
+                    <Button fx:id="saveButton" text="Save" onAction="#handleSaveButton"/>
+                    <Button text="Delete Account" onAction="#handleDeleteAccount" fx:id="deleteAccountButton" style="-fx-min-width: 150"/>
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</VBox>
+

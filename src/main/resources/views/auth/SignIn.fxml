@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<VBox fx:id="signInVBox" xmlns:fx="http://javafx.com/fxml"
+      alignment="CENTER" spacing="10"
+      fx:controller="it.unipi.lsmd.spotify2.controllers.auth.SignInController" styleClass="background">
+    <VBox alignment="CENTER" spacing="20" style="-fx-background-color: white;" maxWidth="400" minHeight="400">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+        <Label text="Sign In" styleClass="title-text" />
+
+        <TextField fx:id="usernameField" promptText="Username" />
+
+        <PasswordField fx:id="passwordField" promptText="Password" />
+
+        <Button text="Sign In" onAction="#signIn" style="-fx-font-weight: bold; -fx-background-radius: 0"/>
+
+        <Hyperlink text="Don't have an account? Sign Up" onAction="#switchToSignUp" styleClass="signup-link" />
+    </VBox>
+</VBox>

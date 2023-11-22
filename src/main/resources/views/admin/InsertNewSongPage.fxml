@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.DropShadow?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="it.unipi.lsmd.spotify2.controllers.admin.InsertNewSongPageController"
+      fx:id="vBox" alignment="CENTER" spacing="10" styleClass="background">
+    <HBox alignment="CENTER" style=" -fx-background-color: black;">
+        <ImageView>
+            <Image url="/img/logoSpotify2_1.png"/>
+        </ImageView>
+    </HBox>
+
+    <Label text="Add new Song" alignment="CENTER">
+        <font>
+            <Font size="24.0"/>
+        </font>
+    </Label>
+
+    <TextField fx:id="titleTextField" promptText="title" style="-fx-border-radius: 0"/>
+
+    <TextField fx:id="artistsTextField" promptText="Enter artists, separated by commas" style="-fx-border-radius: 0">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+    </TextField>
+
+    <ComboBox fx:id="genresComboBox" promptText="Select genres" minWidth="300" />
+
+    <TextField fx:id="yearTextField" promptText="year" style="-fx-border-radius: 0">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+    </TextField>
+
+    <TextField fx:id="durationTextField" promptText="duration" style="-fx-border-radius: 0">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+    </TextField>
+
+    <TextField fx:id="songImageTextField" promptText="image" style="-fx-border-radius: 0">
+        <effect>
+            <DropShadow color="lightgray" spread="0.1"/>
+        </effect>
+    </TextField>
+
+    <Label fx:id="errorMessageLabel" textFill="RED"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Back" onAction="#backButtonClicked"/>
+        <Button text="Submit" onAction="#addSongButtonClicked"/>
+    </HBox>
+</VBox>

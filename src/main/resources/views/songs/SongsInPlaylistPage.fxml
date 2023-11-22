@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:id="vBox" alignment="CENTER" spacing="10">
+    <HBox alignment="CENTER" style=" -fx-background-color: black;">
+        <ImageView>
+            <Image url="/img/logoSpotify2_1.png"/>
+        </ImageView>
+    </HBox>
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Back" onAction="#handleBackButton" />
+        <Button fx:id="addSongButton" text="Add a Song!" onAction="#handleAddSongButton" style="-fx-min-width: 130px"/>
+    </HBox>
+    <ListView fx:id="songsInPlaylistListView" prefWidth="300" prefHeight="400" onMouseClicked="#handleSongClick">
+    </ListView>
+</VBox>

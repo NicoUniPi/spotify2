@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" spacing="10" alignment="CENTER" fx:controller="it.unipi.lsmd.spotify2.controllers.utils.PopupDialogController">
+    <Label text="Playlist name:" />
+    <TextField fx:id="textField" promptText="Enter a name" />
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Confirm" onAction="#confirmButtonAction" />
+        <Button text="Cancel" onAction="#cancelButtonAction" />
+    </HBox>
+</VBox>
