@@ -77,7 +77,7 @@ public class MongoSongDaoImpl implements MongoSongDao {
         Document query = new Document("title", new Document("$regex", regexPattern));
 
         // Perform the MongoDB query
-        try (MongoCursor<Document> cursor = songCollection.find(query).iterator()) {
+        try (MongoCursor<Document> cursor = songCollection.find(query).limit(20).iterator()) {
             return mapDocumentToSongDTO(songs, cursor);
         } catch (MongoException e) {
             // Log MongoDB exception and throw custom DaoException
