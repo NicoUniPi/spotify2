@@ -134,6 +134,9 @@ public class MongoListenerDaoImpl implements MongoListenerDao {
                 Filters.eq("isAdmin", false)
         )));
 
+        // Stage 4: Limit the result to 20 documents
+        pipeline.add(Aggregates.limit(20));
+
         // Perform the MongoDB aggregation query
         try (MongoCursor<Document> cursor = listenerCollection.aggregate(pipeline).iterator()) {
             while (cursor.hasNext()) {
